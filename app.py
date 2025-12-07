@@ -10,8 +10,7 @@ st.set_page_config(page_title="מחולל פרוטוקולים", page_icon="📝
 # פונקציה שמדברת עם ה-AI
 def generate_protocol(api_key, text):
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash') # מודל מהיר וחינמי
-    
+model = genai.GenerativeModel('gemini-pro')    
     prompt = f"""
     תפעל כמזכיר ישיבות מקצועי ומנוסה. הנה סיכום גולמי של פגישה:
     "{text}"
